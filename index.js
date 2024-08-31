@@ -20,7 +20,9 @@ cron.schedule("*/10 * * * *", () => {
     console.log("Fetching and storing Ethereum price...");
     fetchAndStoreEthereumPrice();
   });
-
+app.get("/",(req,res)=>{
+  res.send("Backend is live")
+})
 app.listen(PORT,(req,res)=>{
     console.log(`listening on ${PORT}`);
 })
